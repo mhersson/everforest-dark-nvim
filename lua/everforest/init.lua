@@ -562,6 +562,15 @@ function M.load()
     -- mini.nvim
     hi("MiniIndentscopeSymbol", { fg = p.grey0 })
     hi("MiniIndentscopeSymbolOff", { fg = p.grey0 })
+    hi("MiniIconsAzure", { fg = p.blue })
+    hi("MiniIconsBlue", { fg = p.blue })
+    hi("MiniIconsCyan", { fg = p.aqua })
+    hi("MiniIconsGreen", { fg = p.green })
+    hi("MiniIconsGrey", { fg = p.grey1 })
+    hi("MiniIconsOrange", { fg = p.orange })
+    hi("MiniIconsPurple", { fg = p.purple })
+    hi("MiniIconsRed", { fg = p.red })
+    hi("MiniIconsYellow", { fg = p.yellow })
 
     -- copilot.vim / copilot.lua
     hi("CopilotSuggestion", { fg = p.grey0, italic = true })
