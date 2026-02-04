@@ -4,6 +4,8 @@ A Neovim colorscheme based on the
 [Everforest](https://github.com/sainnhe/everforest) dark medium palette, ported
 from the Helix editor theme.
 
+![screenshot](screenshot.png)
+
 ## Installation
 
 ### lazy.nvim
