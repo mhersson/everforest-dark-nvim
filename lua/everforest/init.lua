@@ -230,6 +230,9 @@ function M.load()
     hi("@tag.attribute", { fg = p.green })
     hi("@tag.delimiter", { fg = p.grey1 })
 
+    -- Terraform/HCL
+    hi("@keyword.terraform", { fg = p.yellow })
+
     -- LSP semantic tokens
     hi("@lsp.type.class", { fg = p.yellow })
     hi("@lsp.type.decorator", { fg = p.purple, italic = true })
