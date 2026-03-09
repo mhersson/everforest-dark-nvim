@@ -38,12 +38,7 @@ local function hi(group, opts)
     vim.api.nvim_set_hl(0, group, opts)
 end
 
--- Check if a plugin module is loaded
-local function is_loaded(module)
-    return package.loaded[module] ~= nil
-end
-
--- Plugin highlight definitions (lazy-loaded)
+-- Plugin highlight definitions
 local plugin_highlights = {
     -- gitsigns.nvim
     ["gitsigns"] = function(p)
@@ -373,12 +368,10 @@ local plugin_highlights = {
     end,
 }
 
--- Load highlights for a plugin if it's loaded
+-- Load all plugin highlights (applied unconditionally to avoid race conditions)
 local function load_plugin_highlights(p)
-    for module, apply_hl in pairs(plugin_highlights) do
-        if is_loaded(module) then
-            apply_hl(p)
-        end
+    for _, apply_hl in pairs(plugin_highlights) do
+        apply_hl(p)
     end
 end
 
