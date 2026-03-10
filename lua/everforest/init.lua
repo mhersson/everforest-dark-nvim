@@ -366,6 +366,57 @@ local plugin_highlights = {
         hi("CmpItemKind", { fg = p.purple })
         hi("CmpItemMenu", { fg = p.grey1 })
     end,
+
+    -- lazy.nvim
+    ["lazy"] = function(p)
+        -- UI elements
+        hi("LazyNormal", { link = "NormalFloat" })
+        hi("LazyButton", { fg = p.fg, bg = p.bg3 })
+        hi("LazyButtonActive", { fg = p.bg0, bg = p.green, bold = true })
+        hi("LazyH1", { fg = p.bg0, bg = p.green, bold = true })
+        hi("LazyH2", { fg = p.orange, bold = true })
+
+        -- Progress
+        hi("LazyProgressDone", { fg = p.green, bold = true })
+        hi("LazyProgressTodo", { fg = p.grey0 })
+
+        -- Text styles
+        hi("LazyComment", { fg = p.grey1 })
+        hi("LazyDimmed", { fg = p.grey0 })
+        hi("LazyProp", { fg = p.grey1 })
+        hi("LazyValue", { fg = p.aqua })
+        hi("LazyDir", { fg = p.blue })
+        hi("LazyUrl", { fg = p.blue, underline = true })
+        hi("LazySpecial", { fg = p.purple })
+        hi("LazyLocal", { fg = p.purple })
+
+        -- Git commit info
+        hi("LazyCommit", { fg = p.purple })
+        hi("LazyCommitType", { fg = p.orange, bold = true })
+        hi("LazyCommitScope", { fg = p.aqua, italic = true })
+        hi("LazyCommitIssue", { fg = p.purple })
+
+        -- Loading reasons
+        hi("LazyReasonCmd", { fg = p.orange })
+        hi("LazyReasonEvent", { fg = p.yellow })
+        hi("LazyReasonFt", { fg = p.aqua })
+        hi("LazyReasonImport", { fg = p.fg })
+        hi("LazyReasonKeys", { fg = p.purple })
+        hi("LazyReasonPlugin", { fg = p.purple })
+        hi("LazyReasonRequire", { fg = p.fg })
+        hi("LazyReasonRuntime", { fg = p.green })
+        hi("LazyReasonSource", { fg = p.aqua })
+        hi("LazyReasonStart", { fg = p.blue })
+
+        -- Diagnostics
+        hi("LazyInfo", { fg = p.blue })
+        hi("LazyWarning", { fg = p.yellow })
+        hi("LazyError", { fg = p.red })
+        hi("LazyNoCond", { fg = p.yellow })
+
+        -- Task output
+        hi("LazyTaskOutput", { fg = p.fg })
+    end,
 }
 
 -- Load all plugin highlights (applied unconditionally to avoid race conditions)
